@@ -14,4 +14,7 @@ test_that('parsers can be combined via operators', {
                 equals(as.character(or(a, aa))))
     expect_that(as.character(a | aa | vowel),
                 equals(as.character(or(a, aa, vowel))))
+
+    expect_that(as.character(!a),
+                equals(as.character(not(a))))
 })

@@ -1,9 +1,9 @@
-context('Kleene star parser')
+context('Kleene star parsers')
 
 a = chr('a')
 aa = lit('aa')
 
-test_that('Kleene star parser works', {
+test_that('Kleene star parsers works', {
     expect_that(many(a)(''), has_match(1L))
     expect_that(many(a)('a'), has_match(1L, 2L))
     expect_that(many(a)('aa'), has_match(1L, 2L, 3L))
